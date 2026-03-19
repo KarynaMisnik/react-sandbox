@@ -9,11 +9,12 @@ export default function App() {
         Welcome to React!
       </h1>
       {/* Use the component and pass it the required props */}
-      <Profile name="John Doe" role="Software Engineer" />
-      <div className="flex m-4 gap-4">
+      <Profile name="Karyna Misnik" role="Software Engineer" />
+      <div className="flex mt-6  mb-2 gap-4">
         <Card name="Squidward Tentacles" role="Manager" />
         <Card name="Sandy Cheeks" role="Scientist" />
         <Card name="Eugene Crabs" role="Businessman" />
+        <Card name="Sheldon Plankton" role="Scientist & Businessman" />
         <Card name="SpongeBob SquarePants" role="Cook" />
       </div>
     </div>

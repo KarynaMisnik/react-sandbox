@@ -12,10 +12,10 @@ export function Card({ name, role }: CardProps) {
     <div
       className="flex flex-col items-center bg-purple-900 
   text-white p-4 rounded-lg w-52 
-  shadow-lg shadow-purple-500/50 text-center"
+  shadow-lg shadow-purple-500/50 text-center border-t-4 border-gray-300"
     >
-      <h3 className="font-bold line-clamp-2">{name}</h3>
-      <p className="break-words text-sm">{role}</p>
+      <h3 className="font-bold text-lg line-clamp-2 mb-2">{name}</h3>
+      <p className="break-words text-sm mb-6">{role}</p>
       <button
         className="mt-auto bg-black p-2 rounded-sm text-white text-xs font-bold 
          m-2"
