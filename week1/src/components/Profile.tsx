@@ -19,7 +19,7 @@ export function Profile({ name, role }: ProfileProps) {
       {/* 5. Button: When clicked (onClick), increment the likes value by one. */}
       <button
         onClick={() => setLikes((prev) => prev + 1)}
-        className="w-full bg-blue-50 text-blue-600 font-bold py-3 rounded-xl hover:bg-blue-100 flex justify-center gap-2 transition-colors"
+        className="w-full bg-blue-100 text-blue-600 font-bold py-3 border-4 border-blue-200 rounded-xl hover:bg-blue-100 flex justify-center gap-2 transition-colors"
       >
         <span>Like</span>
         <span>❤️ {likes}</span>
