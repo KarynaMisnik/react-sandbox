@@ -40,53 +40,60 @@ export default function UserProfile() {
 
   return (
     <>
-      <div>
-        <Link to={"/"}>Return Back</Link>
-        <div>
+      <button className="border-double border-4 border-blue-600 bg-blue-200 text-black font-semibold rounded-md m-4">
+        <Link className="m-2" to={"/"}>
+          Return Back
+        </Link>
+      </button>
+      <div className="m-4 flex flex-col gap-2">
+        <div className="flex flex-col gap-2">
           <h1>
-            <span>Name: </span>
+            <span className="font-semibold">Name: </span>
             {user.name}
           </h1>
           <h4>
-            <span>Username: </span>
+            <span className="font-semibold">Username: </span>
             {user.username}
           </h4>
           <p>
-            <span>Email: </span>
+            <span className="font-semibold">Email: </span>
             {user.email}
           </p>
         </div>
         <div>
           <h3>
-            <span>Address: </span>
+            <span className="font-semibold">Address: </span>
             {user.address.street}
           </h3>
-          <p>
-            <span>Suite: </span>
+          <p className="mt-2">
+            <span className="font-semibold">Suite: </span>
             {user.address.suite}
           </p>
-          <p>
-            <span>City: </span>
+          <p className="mt-2">
+            <span className="font-semibold">City: </span>
             {user.address.city}
           </p>
-          <p>
-            <span>Zipcode: </span>
+          <p className="mt-2">
+            <span className="font-semibold">Zipcode: </span>
             {user.address.zipcode}
           </p>
         </div>
         <div>
           <h3>
-            <span>Company Info: </span>
+            <span className="font-semibold">Company Info: </span>
           </h3>
-          <p>
-            <span>Company Name: </span>
+          <p className="mt-2">
+            <span className="font-semibold">Company Name: </span>
             {user.company.name}
           </p>
-          <p>
-            <span>Catch phrase: </span>
+          <p className="mt-2">
+            <span className="font-semibold">Catch phrase: </span>
             {user.company.catchPhrase}
           </p>
-          <p>{user.company.bs}</p>
+          <p className="mt-2">
+            <span className="font-semibold">BS: </span>
+            {user.company.bs}
+          </p>
         </div>
       </div>
     </>

@@ -22,9 +22,10 @@ export default function UserList() {
 
   return (
     <>
-      <div className="grid grid-cols-2 gap-4">
+      <h1 className="text-center text-3xl mt-4 font-bold">List of Users</h1>
+      <div className="grid grid-cols-2 gap-4 m-4">
         {users.map((user) => (
-          <div className="p-4 bg-zinc-800 text-white rounded-lg">
+          <div key={user.id} className="p-4 bg-zinc-800 text-white rounded-lg">
             <p>{user.name}</p>
             <Link
               to={`/user/${user.id}`}
