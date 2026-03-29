@@ -1,1 +1,5 @@
 @import "tailwindcss";
+
+.btn-primary {
+  @apply px-4 py-2 rounded border-4 bg-blue-500 text-white hover:bg-blue-600;
+}
