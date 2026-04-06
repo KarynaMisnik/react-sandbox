@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Modal from "./components/Modal";
 
 // Fake data: Camping gear and their weights in grams
 const CAMPING_GEAR = [
@@ -10,6 +11,8 @@ const CAMPING_GEAR = [
 export default function App() {
   // 1. State for the Modal's visibility (open/closed)
   const [isOpen, setIsOpen] = useState(false);
+  const [showInfo, setShowInfo] = useState(false);
+  const [modalText, setModalText] = useState("");
 
   // 2. Reduce math:
   // The function calculates the accumulating sum and the current item together. Initial value is 0.
@@ -18,11 +21,9 @@ export default function App() {
   return (
     <div className="p-8">
       <h2 className="text-2xl font-bold mb-4">Camping Trip Summary</h2>
-
       <p className="text-xl font-black text-blue-600 mb-4">
         Backpack weight: {totalWeight} g
       </p>
-
       {/* Button that changes the state to true and "opens" the window */}
       <button
         onClick={() => setIsOpen(true)}
@@ -30,7 +31,6 @@ export default function App() {
       >
         View Equipment
       </button>
-
       {/* 3. Conditional Rendering (&&) for the Modal 
           This black, full-screen background (fixed inset-0) is drawn 
           on the screen ONLY when the isOpen state is true! */}
@@ -60,6 +60,31 @@ export default function App() {
           </div>
         </div>
       )}
+      <div>
+        <button
+          className="bg-blue-500 text-white px-4 py-2 mt-4 mr-2 rounded shadow hover:bg-zinc-700"
+          onClick={() => {
+            setModalText("This is first modal text");
+            setShowInfo(true);
+          }}
+        >
+          Open Modal 1
+        </button>
+
+        <button
+          className="bg-pink-800 text-white px-4 py-2 mt-4 rounded shadow hover:bg-zinc-700"
+          onClick={() => {
+            setModalText("This is second modal text");
+            setShowInfo(true);
+          }}
+        >
+          Open Modal 2
+        </button>
+
+        <Modal isOpen={showInfo} onClose={() => setShowInfo(false)}>
+          {modalText}
+        </Modal>
+      </div>
     </div>
   );
 }
