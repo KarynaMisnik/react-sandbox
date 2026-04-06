@@ -6,6 +6,29 @@
   "devDependencies": {
     "autoprefixer": "^10.4.27",
     "postcss": "^8.5.8",
-    "tailwindcss": "^4.2.2"
-  }
+    "tailwindcss": "^4.2.2",
+    "vitest": "^4.1.2"
+  },
+  "name": "react-sandbox",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "vitest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KarynaMisnik/react-sandbox.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/KarynaMisnik/react-sandbox/issues"
+  },
+  "homepage": "https://github.com/KarynaMisnik/react-sandbox#readme"
 }
