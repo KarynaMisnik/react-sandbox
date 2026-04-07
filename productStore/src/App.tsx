@@ -1,5 +1,11 @@
+import StorePage from "./pages/StorePage";
+
 function App() {
-  return <></>;
+  return (
+    <>
+      <StorePage />
+    </>
+  );
 }
 
 export default App;
