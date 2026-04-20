@@ -12,12 +12,13 @@ export default function WordMagnet({ magnet }: Props) {
       id: magnet.id,
     });
 
-  const style = {
+  const style: React.CSSProperties = {
     transform: CSS.Translate.toString(transform),
     position: magnet.status === "fridge" ? "absolute" : "relative",
     left: magnet.status === "fridge" ? magnet.x : undefined,
     top: magnet.status === "fridge" ? magnet.y : undefined,
-  } as React.CSSProperties;
+    zIndex: isDragging ? 50 : "auto",
+  };
 
   return (
     <div
@@ -28,6 +29,7 @@ export default function WordMagnet({ magnet }: Props) {
       className={`
         px-3 py-2 rounded-lg bg-yellow-200 shadow-md
         cursor-grab active:cursor-grabbing
+        select-none
         ${isDragging ? "opacity-50" : "opacity-100"}
       `}
     >
