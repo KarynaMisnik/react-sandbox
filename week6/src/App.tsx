@@ -107,7 +107,8 @@ export default function App() {
         </div>
       </DndContext>
       <DndContext onDragEnd={handleDragEndFridge}>
-        <div className="p-12 min-h-screen bg-slate-50 font-sans">
+        <div className="p-12 min-h-screen bg-slate-50 font-sans print:bg-white print:p-0">
+          {/* HEADER */}
           <div className="bg-zinc-800 text-white p-6 mb-8 rounded-2xl flex justify-between items-center shadow-lg print:hidden">
             <div>
               <h1 className="text-xl font-bold">Word Fridge</h1>
@@ -123,10 +124,19 @@ export default function App() {
               >
                 Load More Words 📦
               </button>
+
+              <button
+                onClick={() => window.print()}
+                className="bg-blue-600 px-4 py-2 rounded-lg font-bold"
+              >
+                Print Creation 🖨️
+              </button>
             </div>
           </div>
 
-          <div className="flex gap-12 items-start">
+          {/* MAIN LAYOUT */}
+          <div className="flex gap-12 items-start print:block">
+            {/* WORD BANK */}
             <div className="flex flex-col gap-4 p-4 bg-white rounded-xl shadow print:hidden">
               {magnets
                 .filter((m) => m.status === "bank")
@@ -135,7 +145,8 @@ export default function App() {
                 ))}
             </div>
 
-            <div className="flex-1">
+            {/* FRIDGE */}
+            <div className="flex-1 print:flex print:justify-center print:items-center print:h-screen">
               <FridgeDoor>
                 {magnets
                   .filter((m) => m.status === "fridge")
